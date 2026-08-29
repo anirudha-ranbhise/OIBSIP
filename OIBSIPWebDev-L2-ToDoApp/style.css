@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F3F4F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+.app-container {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 500px;
+}
+
+h2 {
+    color: #1F2937;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.input-section {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #4F46E5;
+}
+
+button {
+    background-color: #4F46E5;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #4338CA;
+}
+
+.counters {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #6B7280;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.list-box {
+    margin-bottom: 1.5rem;
+}
+
+.list-box h3 {
+    font-size: 1.1rem;
+    color: #374151;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 0.25rem;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    padding: 0.75rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #9CA3AF;
+}
+
+.task-actions {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.task-actions button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+}
+
+.btn-complete {
+    background-color: #10B981;
+}
+.btn-complete:hover {
+    background-color: #059669;
+}
+
+.btn-delete {
+    background-color: #EF4444;
+}
+.btn-delete:hover {
+    background-color: #DC2626;
+}
+
+.empty-msg {
+    color: #9CA3AF;
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    padding: 0.5rem 0;
+}
