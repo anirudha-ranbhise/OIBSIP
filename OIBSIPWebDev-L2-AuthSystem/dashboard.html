@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Protected Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="dashboard-box">
+            <h2>Welcome to your Dashboard!</h2>
+            <p id="welcomeUser" class="welcome-text"></p>
+            <p class="protected-info">🔒 You have successfully accessed a secure, session-protected route.</p>
+            <button id="logoutBtn" class="btn-submit btn-logout">Logout</button>
+        </div>
+    </div>
+
+    <script>
+        const currentUser = JSON.parse(localStorage.getItem('oibsip_current_user'));
+        
+        // Route Protection Check
+        if (!currentUser) {
+            window.location.href = 'index.html';
+        } else {
+            document.getElementById('welcomeUser').textContent = `Logged in as: ${currentUser.username} (${currentUser.email})`;
+        }
+
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            localStorage.removeItem('oibsip_current_user');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
